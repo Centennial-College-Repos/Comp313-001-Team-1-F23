@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aboutus_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_card"
+    android:orientation="vertical"
+    tools:context=".views.emt.EmtDashboardActivity">
+
+    <!-- Header -->
+
+    <!-- Request Button -->
+    <TextView
+        android:id="@+id/emtDashboardHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Emergency Technician Dashboard"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white" />
+
+    <!-- View Patients Button -->
+
+    <!-- Update Profile Button -->
+
+    <!-- Communication Tool Button -->
+
+    <!-- Medical Guidelines Button -->
+
+    <!-- Medical Education Button -->
+
+    <!-- Logout Button -->
+
+    <Button
+        android:id="@+id/requestButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emtDashboardHeader"
+        android:layout_marginTop="63dp"
+        android:text="Emergency Request"
+        android:textColor="@color/red"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/viewPatientsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/requestButton"
+        android:layout_marginTop="34dp"
+        android:text="View Patients" />
+
+    <Button
+        android:id="@+id/updateProfileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Update Profile" />
+
+    <Button
+        android:id="@+id/communicationToolButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateProfileButton"
+        android:layout_marginTop="207dp"
+        android:text="Communication Tool" />
+
+    <Button
+        android:id="@+id/medicalGuidelinesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/communicationToolButton"
+        android:layout_marginTop="30dp"
+        android:text="Medical Guidelines" />
+
+    <Button
+        android:id="@+id/medicalEducationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicalGuidelinesButton"
+        android:layout_marginTop="23dp"
+        android:text="Medical Education" />
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicalEducationButton"
+        android:layout_marginTop="31dp"
+        android:text="Logout" />
+
+    <!-- Additional components and layout can be added based on your application's requirements -->
+
+</RelativeLayout>

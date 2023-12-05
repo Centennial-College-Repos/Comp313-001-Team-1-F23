@@ -6,4 +6,17 @@
         <item>Burns</item>
         <!-- Add more conditions as needed -->
     </string-array>
+    <string-array name="medical_education_topics">
+        <item>CPR Training</item>
+        <item>Advanced Life Support</item>
+        <item>Trauma Management</item>
+        <item>Pediatric Emergency Care</item>
+    </string-array>
+    <string-array name="request_status">
+        <item>Pending</item>
+        <item>In Progress</item>
+        <item>Escalated</item>
+        <item>Completed</item>
+        <item>Cancelled</item>
+    </string-array>
 </resources>

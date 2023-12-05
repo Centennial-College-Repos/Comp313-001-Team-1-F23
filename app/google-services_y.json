@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "264722431545",
-    "firebase_url": "https://comp313neocare-default-rtdb.firebaseio.com",
-    "project_id": "comp313neocare",
-    "storage_bucket": "comp313neocare.appspot.com"
+    "project_number": "467380199230",
+    "project_id": "neocare-a8a98",
+    "storage_bucket": "neocare-a8a98.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:264722431545:android:99f32978cdc4a6583f97e8",
+        "mobilesdk_app_id": "1:467380199230:android:5729ea8aa109a41861566f",
         "android_client_info": {
           "package_name": "com.gokulraj.neocare"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB7ShG72wT9r-rDHRPzhIIvh-81vA-HkUY"
+          "current_key": "AIzaSyAiDEAdjmgJEe9KulILWk706Pqnjljerao"
         }
       ],
       "services": {

@@ -10,9 +10,9 @@ import android.speech.RecognizerIntent
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.gokulraj.neocare.R
 import com.gokulraj.neocare.database.User
 import com.gokulraj.neocare.databinding.ActivityLoginBinding
+import com.gokulraj.neocare.views.emt.EmtLoginActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -78,6 +78,16 @@ class LoginActivity : AppCompatActivity() {
 
         binding.registerRedirect.setOnClickListener{
             startActivity(Intent(this@LoginActivity, RegistrationActivity::class.java))
+            finish()
+        }
+
+        binding.emtLogin.setOnClickListener{
+            startActivity(Intent(this@LoginActivity, EmtLoginActivity::class.java))
+            finish()
+        }
+
+        binding.forgetRedirect.setOnClickListener{
+            startActivity(Intent(this@LoginActivity, ForgetPasswordActivity::class.java))
             finish()
         }
     }

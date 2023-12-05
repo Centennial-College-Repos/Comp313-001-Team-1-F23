@@ -21,18 +21,7 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:layout_marginTop="20dp">
-<!--
-    <Button
-        android:id="@+id/requestButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="59dp"
-        android:background="@drawable/round_button"
-        android:text="Request Emergency Services"
-        android:textSize="20sp" />
--->
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,6 +43,7 @@
             android:textStyle="bold"
             android:textAlignment="center"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,8 +56,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/voicecommandbutton"
-        android:scaleType="fitCenter"
-         />
+        android:scaleType="fitCenter" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,6 +67,41 @@
     </LinearLayout>
 
     </LinearLayout>
+
+    <!--region: Emergency Technician Entry Button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="200dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            >
+            <ImageView
+                android:id="@+id/emtLogin"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/emt_logo2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Emergency Technician"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--endregion: Emergency Technician Entry Button-->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -190,6 +214,20 @@
                     android:textStyle="bold"
                     tools:ignore="InvalidId,TextContrastCheck,VisualLintBounds" />
             </LinearLayout>
+
+            <!--region: Forget Password-->
+            <TextView
+                android:id="@+id/forgetRedirect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:alpha="0.7"
+                android:text="Forget password?"
+                android:textColor="#78909C"
+                android:textStyle="bold"
+                tools:ignore="InvalidId,TextContrastCheck,VisualLintBounds" />
+            <!--endregion: Forget Password-->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

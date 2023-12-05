@@ -19,8 +19,7 @@
         android:layout_height="100dp"
         android:layout_margin="10dp"
         android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        />
+        android:layout_centerVertical="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,8 +41,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:padding="10dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvDriverName"
@@ -57,8 +55,7 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:padding="10dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvLocation"
@@ -71,7 +68,6 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:padding="10dp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>

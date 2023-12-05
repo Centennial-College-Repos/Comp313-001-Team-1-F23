@@ -5,8 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,6 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NeoCare"
         tools:targetApi="31">
+        <activity android:name=".views.emt.CommunicationToolActivity" />
+        <activity android:name=".views.emt.EmtDashboardActivity"/>
+        <activity android:name=".views.emt.EmtEmergencyRequestActivity" />
+        <activity android:name=".views.emt.EmtEmergencyRequestDetailActivity" />
+        <activity android:name=".views.emt.EmtEmergencyRequestTransferActivity" />
+        <activity android:name=".views.emt.EmtLoginActivity" />
+        <activity android:name=".views.emt.EmtProfileActivity" />
+        <activity android:name=".views.emt.EmtRegistrationActivity" />
+        <activity android:name=".views.emt.MedicalEducationActivity" />
+        <activity android:name=".views.emt.MedicalGuidelinesActivity" />
+        <activity android:name=".views.emt.PatientDetailActivity" />
+        <activity android:name=".views.emt.ViewPatientsActivity" />
+
+        <activity android:name=".views.ResetPasswordActivity" />
+        <activity android:name=".views.ForgetPasswordActivity" />
         <activity
             android:name=".views.MainActivity"
             android:exported="true">
@@ -32,14 +45,17 @@
         <activity android:name=".views.AboutUsActivity" />
         <activity android:name=".views.FirstAidView" />
         <activity android:name=".views.HomePageActivity" />
-        <activity android:name=".views.ProfileActivity"/>
-        <activity android:name=".views.AmbulanceActivity"/>
-        <activity android:name=".views.ProtocolActivity"/>
-        <activity android:name=".views.LoginActivity"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
-            android:exported="true">
+        <activity android:name=".views.ProfileActivity" />
+        <activity android:name=".views.AmbulanceActivity" />
+        <activity android:name=".views.ProtocolActivity" />
+
+        <activity
+            android:name=".views.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -47,10 +63,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".views.RegistrationActivity"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
-            android:exported="true">
-        </activity>
+        <activity
+            android:name=".views.RegistrationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"></activity>
     </application>
 
 </manifest>

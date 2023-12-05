@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer Emergency Request"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Optional: Dropdown or search field to select the EMT or organization -->
+
+    <EditText
+        android:id="@+id/etTransferTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Transfer to (EMT/Organization Name)"
+        android:inputType="text"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Button to confirm the transfer -->
+    <Button
+        android:id="@+id/btnTransfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transfer Request"/>
+
+</LinearLayout>

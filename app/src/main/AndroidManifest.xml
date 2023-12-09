@@ -48,6 +48,7 @@
         <activity android:name=".views.ProfileActivity" />
         <activity android:name=".views.AmbulanceActivity" />
         <activity android:name=".views.ProtocolActivity" />
+        <activity android:name=".views.FeedbackActivity" />
 
         <activity
             android:name=".views.LoginActivity"

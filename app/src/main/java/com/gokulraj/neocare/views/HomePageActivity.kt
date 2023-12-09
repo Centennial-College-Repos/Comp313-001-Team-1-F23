@@ -33,7 +33,7 @@ class HomePageActivity:AppCompatActivity() {
 
 
         // Retrieve the user type from SharedPreferences
-        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
         val userType = sharedPreferences.getString("USER_TYPE", "default_value")
 
         if (userType != null) {
@@ -75,7 +75,9 @@ class HomePageActivity:AppCompatActivity() {
         binding.firstAidLink.setOnClickListener {
             startActivity(Intent(this, FirstAidView::class.java))
         }
-
+        binding.feedbackLink.setOnClickListener {
+            startActivity(Intent(this, FeedbackActivity::class.java))
+        }
         binding.updateProfileLink.setOnClickListener {
             startActivity(Intent(this,ProfileActivity::class.java))
         }
@@ -146,6 +148,7 @@ class HomePageActivity:AppCompatActivity() {
         binding.teamMembersLink.visibility = View.VISIBLE
         binding.aboutUsLink.visibility = View.VISIBLE
         binding.logOutLink.visibility=View.VISIBLE
+        binding.feedbackLink.visibility=View.VISIBLE
         binding.firstAidLink.visibility = View.VISIBLE // Hide this option for patients
         binding.ambulanceDetails.visibility=View.GONE
         binding.protocols.visibility=View.GONE

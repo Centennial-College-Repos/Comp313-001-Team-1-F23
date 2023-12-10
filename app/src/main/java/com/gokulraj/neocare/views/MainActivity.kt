@@ -8,6 +8,9 @@ import android.os.Handler
 import android.os.Looper
 import com.gokulraj.neocare.databinding.ActivityMainBinding
 
+/**
+ * This is the main activity of the application which launches all other pages
+ *  */
 
 class MainActivity : AppCompatActivity() {
 

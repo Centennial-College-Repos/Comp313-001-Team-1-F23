@@ -8,6 +8,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityEmtCommunicationToolBinding
 
+/**
+ * This is for the EMT to communicate with patient and other EMT using call or messaging.
+ *
+ *  */
+
 class CommunicationToolActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEmtCommunicationToolBinding

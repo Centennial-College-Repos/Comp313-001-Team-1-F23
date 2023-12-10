@@ -8,6 +8,10 @@ import com.gokulraj.neocare.R
 import com.gokulraj.neocare.adapters.AmbulanceAdapter
 import com.gokulraj.neocare.database.AmbulanceEntity
 
+/**
+ * This activity page displays ambulance details
+ *  */
+
 class AmbulanceActivity:AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView

@@ -9,6 +9,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.R
 
+/**
+ * This activity page displays first aid information needed in case of emergencies
+ *  */
+
 class FirstAidView : AppCompatActivity() {
     private lateinit var emergencyDescriptionTextView: TextView
     private lateinit var firstAidInfoTextView: TextView

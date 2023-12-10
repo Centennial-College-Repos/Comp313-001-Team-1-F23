@@ -7,6 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.R
 import com.google.firebase.auth.FirebaseAuth
 
+/**
+ * Dashboard for EMT
+ *  */
+
 class EmtDashboardActivity : AppCompatActivity() {
 
     private lateinit var emergencyRequestButton: Button

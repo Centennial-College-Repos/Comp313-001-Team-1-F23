@@ -21,6 +21,10 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.core.Context
 
+/**
+ * This activity page handles the registration for patient and EMT
+ *  */
+
 class RegistrationActivity : AppCompatActivity(), View.OnFocusChangeListener {
 
     private lateinit var mBinding: ActivityRegistrationBinding

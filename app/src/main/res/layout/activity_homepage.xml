@@ -5,60 +5,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/back"
     android:orientation="vertical">
-<!--
-    <Button
-        android:id="@+id/requestButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="59dp"
-        android:background="@color/red_button_color"
-        android:text="Request Emergency Services"
-        android:textSize="20sp" />
-     -->
-  <!--
-    <ImageView
-        android:id="@+id/voiceCommandButton"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/voicecommandbutton"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp" />
-
-    <TextView
-        android:id="@+id/resultTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Call for Emergency Ambulance Services"
-        android:textColor="@color/red"
-        android:padding="16dp" />
--->
 
 <ImageView
         android:id="@+id/logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:src="@drawable/logo" />
 
-<!--
-    <TextView
-        android:id="@+id/registrationLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:autoLink="web"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Register"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="20sp" />
--->
+
     <TextView
         android:id="@+id/teamMembersLink"
         android:layout_width="wrap_content"
@@ -155,10 +111,77 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/logOutLink"
+        android:id="@+id/emergencyRequest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ambulanceDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:text="Emergency Requests"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/viewPatients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emergencyRequest"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:text="View Patients"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/communicationTool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewPatients"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:text="Communication Tools"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/medicalGuidelines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/communicationTool"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:text="Medical Guidelines"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/medicalEducation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicalGuidelines"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:autoLink="web"
+        android:clickable="true"
+        android:text="Medical Education"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/logOutLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicalEducation"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:autoLink="web"

@@ -67,7 +67,7 @@
         <activity
             android:name=".views.RegistrationActivity"
             android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
     </application>
 
 </manifest>

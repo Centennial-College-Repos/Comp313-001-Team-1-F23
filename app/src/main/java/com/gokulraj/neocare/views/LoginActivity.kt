@@ -21,6 +21,10 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlin.system.exitProcess
 
+/**
+ * This handles the login of EMT and Patients into the application
+ *  */
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding

@@ -8,6 +8,10 @@ import com.gokulraj.neocare.R
 import com.gokulraj.neocare.adapters.TeamMembersAdapter
 import com.gokulraj.neocare.database.TeamMembersEntity
 
+/**
+ * This activity page displays team member details
+ *  */
+
 class TeamMembersActivity:AppCompatActivity(){
 
     private lateinit var recyclerView: RecyclerView

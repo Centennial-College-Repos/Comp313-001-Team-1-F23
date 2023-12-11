@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 /**
  * In response to Reset Email Link
+ * This page handles reset Password function
  * */
 class ResetPasswordActivity : AppCompatActivity() {
 

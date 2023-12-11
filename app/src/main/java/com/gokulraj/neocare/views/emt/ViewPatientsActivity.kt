@@ -8,6 +8,10 @@ import com.gokulraj.neocare.adapters.PatientAdapter
 import com.gokulraj.neocare.database.Patient
 import com.gokulraj.neocare.databinding.ActivityViewPatientsBinding
 
+/**
+ * This activity page displays patient details
+ *  */
+
 class ViewPatientsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityViewPatientsBinding

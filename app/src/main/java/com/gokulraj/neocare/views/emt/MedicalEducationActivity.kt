@@ -12,7 +12,7 @@ import com.gokulraj.neocare.databinding.ActivityEmtMedicaleducationBinding
  *
  * */
 
-class MedicalEducationActivity : AppCompatActivity() {
+class  MedicalEducationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEmtMedicaleducationBinding
 

@@ -11,6 +11,10 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
+/**
+ * This activity does the forgot password function
+ *  */
+
 class ForgetPasswordActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityForgetpasswordBinding

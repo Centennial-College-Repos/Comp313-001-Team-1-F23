@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.R
 import com.gokulraj.neocare.databinding.ActivityAboutusBinding
 
+/**
+ * This About Us activity page displays the details of the company NeoCare
+ *  */
 
 class AboutUsActivity: AppCompatActivity() {
 

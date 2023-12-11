@@ -4,6 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityPatientDetailBinding
 
+/**
+ * This activity page displays patient details
+ *  */
+
 class PatientDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPatientDetailBinding

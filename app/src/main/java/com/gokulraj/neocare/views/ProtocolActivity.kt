@@ -10,6 +10,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.R
 
+/**
+ * This activity page protocols and information for emergencies
+ *  */
+
 class ProtocolActivity : AppCompatActivity() {
 
     private lateinit var conditionSpinner: Spinner

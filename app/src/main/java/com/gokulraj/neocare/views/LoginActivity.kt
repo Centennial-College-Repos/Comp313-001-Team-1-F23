@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import com.gokulraj.neocare.database.User
 import com.gokulraj.neocare.databinding.ActivityLoginBinding
 import com.gokulraj.neocare.views.emt.EmtLoginActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -38,17 +39,6 @@ class LoginActivity : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
 
-        /*
-        binding.requestButton.setOnClickListener {
-            // Handle the emergency services request here
-            // You can start an emergency service activity, make a call, or perform any other action as needed.
-            // For this example, we'll open the phone dialer to call an emergency number (e.g., 911).
-            val phoneNumber = "tel:911"
-            val intent = Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumber))
-            startActivity(intent)
-        }
-
-         */
 
         binding.requestImageView.setOnClickListener {
             // Handle the emergency services request here
@@ -164,40 +154,65 @@ class LoginActivity : AppCompatActivity() {
         return errorMsg == null
     }
 
-    private fun loginUser(email: String, password: String){
-        databaseReference.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
-                    for (userSnapshot in snapshot.children){
-                        val userData = userSnapshot.getValue(User::class.java)
+    private fun loginUser(email: String, password: String) {
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Authentication successful, get the authenticated user
+                    val firebaseUser = FirebaseAuth.getInstance().currentUser
+                    if (firebaseUser != null) {
+                        val uid = firebaseUser.uid
 
-                        if (userData != null && userData.password == password){
-                            val userType = userData.userType // Accessing userType from User model
+                        getUserTypeFromDatabase(uid) { userType ->
+                            // Use userType here (e.g., update UI or perform further actions)
+                            println(userType)
 
-                            //println(userType)
-
-                            // Storing the user type in SharedPreferences
+                            // Storing the UID and userType in SharedPreferences
                             val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
                             val editor = sharedPreferences.edit()
-                            editor.putString("USER_TYPE", userType)
+                            editor.putString("UID", uid)
+                            editor.putString("EMAIL", email)
+                            editor.putString("USER_TYPE", userType) // Add this line
                             editor.apply()
-
 
                             Toast.makeText(this@LoginActivity, "Login Successful", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                             finish()
-                            return
                         }
+                    } else {
+                        // Handle the case where the authenticated user is null
+                        Toast.makeText(this@LoginActivity, "User not authenticated", Toast.LENGTH_SHORT).show()
                     }
+                } else {
+                    // Authentication failed
+                    Toast.makeText(this@LoginActivity, "Login Failed! Please check your credentials.", Toast.LENGTH_SHORT).show()
                 }
-                Toast.makeText(this@LoginActivity, "Login Failed! Please check your credentials.", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+
+    private fun getUserTypeFromDatabase(uid: String, callback: (String) -> Unit) {
+        val userTypeReference = firebaseDatabase.reference.child("users").child(uid).child("userType")
+
+        userTypeReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val userType = if (snapshot.exists()) {
+                    snapshot.getValue(String::class.java) ?: "default"
+                } else {
+                    "default"
+                }
+                callback(userType)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@LoginActivity, "Database Error: ${error.message}", Toast.LENGTH_SHORT).show()
+                // Handle the error
+                Toast.makeText(this@LoginActivity, "Error retrieving user type: ${error.message}", Toast.LENGTH_SHORT).show()
+                callback("default") // Return default value in case of an error
             }
         })
     }
+
+
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setTitle("Exit App")

@@ -15,36 +15,57 @@
         android:layout_gravity="center"
         android:layout_marginBottom="16dp" />
 
-    <!-- View-only field for existing medical information -->
     <TextView
-        android:id="@+id/existingMedicalInfoTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp" />
+        android:text="Full Name"
+        android:textSize="16dp"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"/>
 
-    <!-- Editable field for medical information -->
     <EditText
-        android:id="@+id/medicalInfoEditText"
+        android:id="@+id/profileFullName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter or Modify Medical Information"
-        android:inputType="textMultiLine"
-        android:gravity="start|top"
-        android:layout_marginBottom="16dp" />
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:padding="8dp"/>
 
-    <!-- Save button to save changes -->
-    <Button
-        android:id="@+id/saveButton"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health Card Number"
+        android:textSize="16dp"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"/>
+    <EditText
+        android:id="@+id/profileHealthNumber"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Health Card Number"
+        android:inputType="phone"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="16dp"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/profilePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New Password (leave blank to keep current)"
+
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Delete button to delete information -->
-    <Button
-        android:id="@+id/deleteButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete" />
-
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>

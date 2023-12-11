@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityEmtCommunicationToolBinding
 
 /**
+ *  Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This is for the EMT to communicate with patient and other EMT using call or messaging.
  *
  *  */

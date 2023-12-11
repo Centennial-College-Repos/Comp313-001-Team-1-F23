@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityEmtEmergencyrequestTransferBinding
 
 /**
- *
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * The layout will provide a user interface for
  * transferring an emergency request to another EMT or a medical organization.
  * */

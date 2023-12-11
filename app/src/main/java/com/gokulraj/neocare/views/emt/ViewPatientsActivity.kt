@@ -9,6 +9,8 @@ import com.gokulraj.neocare.database.Patient
 import com.gokulraj.neocare.databinding.ActivityViewPatientsBinding
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This activity page displays patient details
  *  */
 

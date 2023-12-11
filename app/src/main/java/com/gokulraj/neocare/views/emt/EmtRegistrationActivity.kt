@@ -1,5 +1,11 @@
 package com.gokulraj.neocare.views.emt
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Registration Activity for EMT
+ *  */
+
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
@@ -12,9 +18,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-/**
- * Registration Activity for EMT
- *  */
+
 class EmtRegistrationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEmtRegistrationBinding

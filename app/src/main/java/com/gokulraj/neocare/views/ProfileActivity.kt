@@ -12,6 +12,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This handles the profile information of user
  *  */
 

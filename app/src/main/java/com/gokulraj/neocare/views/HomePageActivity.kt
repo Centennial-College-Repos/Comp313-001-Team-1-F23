@@ -1,5 +1,12 @@
 package com.gokulraj.neocare.views
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * This is the home page for the users: EMT and patient
+ * It displays the contents based on the access
+ *  */
+
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -17,11 +24,6 @@ import com.gokulraj.neocare.views.emt.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlin.system.exitProcess
-
-/**
- * This is the home page for the users: EMT and patient
- * It displays the contents based on the access
- *  */
 
 class HomePageActivity:AppCompatActivity() {
 

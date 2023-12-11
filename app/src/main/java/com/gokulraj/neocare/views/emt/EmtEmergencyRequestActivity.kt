@@ -9,7 +9,8 @@ import com.gokulraj.neocare.database.EmergencyRequest
 import com.gokulraj.neocare.databinding.ActivityEmtEmergencyrequestBinding
 
 /**
- *
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This class will manage a list of emergency requests and will open a detailed view when an item is clicked.
  * The XML layout will contain a RecyclerView to display the list of emergency requests.
  * */

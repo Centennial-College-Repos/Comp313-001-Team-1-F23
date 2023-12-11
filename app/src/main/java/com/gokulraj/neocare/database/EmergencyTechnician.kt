@@ -1,5 +1,11 @@
 package com.gokulraj.neocare.database
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Emergency Technician details
+ *  */
+
 data class EmergencyTechnician(
     private val _emtId: String? = null,
     private val _fullName: String? = null,

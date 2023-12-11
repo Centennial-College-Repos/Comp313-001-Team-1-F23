@@ -1,5 +1,11 @@
 package com.gokulraj.neocare.database
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Emergency Request Entity
+ *  */
+
 data class EmergencyRequest(
     private val _requestId: String? = null,
     private val _patientName: String? = null,

@@ -8,6 +8,8 @@ import com.gokulraj.neocare.databinding.ActivityResetpasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * In response to Reset Email Link
  * This page handles reset Password function
  * */

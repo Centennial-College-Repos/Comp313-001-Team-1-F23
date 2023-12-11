@@ -6,6 +6,8 @@ import com.gokulraj.neocare.R
 import com.gokulraj.neocare.databinding.ActivityAboutusBinding
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This About Us activity page displays the details of the company NeoCare
  *  */
 

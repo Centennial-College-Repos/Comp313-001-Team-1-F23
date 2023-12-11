@@ -9,6 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gokulraj.neocare.R
 import com.gokulraj.neocare.database.TeamMembersEntity
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Adapter for TeamMember details
+ *  */
 
 class TeamMembersAdapter(private val developerList: List<TeamMembersEntity>) :
     RecyclerView.Adapter<TeamMembersAdapter.ViewHolder>() {

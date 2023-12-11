@@ -6,6 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gokulraj.neocare.database.EmergencyRequest
 import com.gokulraj.neocare.databinding.ActivityEmtEmergencyrequestItemBinding
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Adapter for Emergency Request details
+ *  */
+
 class EmergencyRequestAdapter(
     private val emergencyRequests: List<EmergencyRequest>,
     private val onEmergencyRequestClicked: (EmergencyRequest) -> Unit

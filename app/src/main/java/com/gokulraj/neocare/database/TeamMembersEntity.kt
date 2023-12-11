@@ -1,5 +1,11 @@
 package com.gokulraj.neocare.database
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Team Member Entity
+ *  */
+
 data class TeamMembersEntity(
     val dev_name: String,
     val dev_id: String,

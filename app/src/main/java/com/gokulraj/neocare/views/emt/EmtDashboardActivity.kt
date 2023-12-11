@@ -9,6 +9,8 @@ import com.google.firebase.auth.FirebaseAuth
 
 /**
  * Dashboard for EMT
+ *  Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  *  */
 
 class EmtDashboardActivity : AppCompatActivity() {

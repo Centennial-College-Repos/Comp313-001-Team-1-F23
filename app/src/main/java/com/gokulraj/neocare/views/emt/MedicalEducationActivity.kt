@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityEmtMedicaleducationBinding
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * Access educational resources.
  * Retrieve a list of medical education topics and provide an interface for selecting and viewing details about each topic.
  *

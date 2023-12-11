@@ -9,6 +9,8 @@ import com.gokulraj.neocare.adapters.AmbulanceAdapter
 import com.gokulraj.neocare.database.AmbulanceEntity
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This activity page displays ambulance details
  *  */
 

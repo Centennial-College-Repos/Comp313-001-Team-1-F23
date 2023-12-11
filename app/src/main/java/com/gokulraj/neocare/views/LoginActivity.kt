@@ -22,6 +22,8 @@ import com.google.firebase.database.ValueEventListener
 import kotlin.system.exitProcess
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This handles the login of EMT and Patients into the application
  *  */
 

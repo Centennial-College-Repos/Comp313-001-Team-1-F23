@@ -12,6 +12,8 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * Do not forget to add current EMT to Firebase Authentication
  * */
 class EmtProfileActivity : AppCompatActivity() {

@@ -9,6 +9,8 @@ import android.os.Looper
 import com.gokulraj.neocare.databinding.ActivityMainBinding
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This is the main activity of the application which launches all other pages
  *  */
 

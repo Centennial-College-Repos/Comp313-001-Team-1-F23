@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.R
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This activity page displays first aid information needed in case of emergencies
  *  */
 

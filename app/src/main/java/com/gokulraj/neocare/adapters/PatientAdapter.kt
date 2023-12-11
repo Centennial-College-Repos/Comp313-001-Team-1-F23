@@ -6,6 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gokulraj.neocare.database.Patient
 import com.gokulraj.neocare.databinding.ActivityPatientItemBinding
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Adapter for patient details
+ *  */
+
 class PatientAdapter(
     private val patients: List<Patient>,
     private val onClick: (Patient) -> Unit

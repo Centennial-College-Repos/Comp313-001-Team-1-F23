@@ -9,6 +9,8 @@ import com.gokulraj.neocare.databinding.ActivityEmtEmergencyrequestDetailBinding
 
 
 /**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * To handle viewing, updating, and transferring an emergency request.
  * */
 class EmtEmergencyRequestDetailActivity : AppCompatActivity() {

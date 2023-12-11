@@ -1,5 +1,11 @@
 package com.gokulraj.neocare.database
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Patient details
+ *  */
+
 data class Patient(
     private val _patientId: String?,
     private val _fullName: String?,

@@ -9,6 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gokulraj.neocare.R
 import com.gokulraj.neocare.database.AmbulanceEntity
 
+/**
+ * Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
+ * Adapter for ambulance details
+ *  */
+
+
 class AmbulanceAdapter(private val ambulanceList: List<AmbulanceEntity>) :
     RecyclerView.Adapter<AmbulanceAdapter.ViewHolder>() {
 

@@ -6,9 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityEmtMedicalguidelinesBinding
 
-
 /**
- *
+ *Group 1
+ * Team Members: GokulRaj, Lea, Husna, Johny, Vinny, Zhiyang
  * This activity could be used by EMTs to access various medical guidelines.
  * The interaction with an database or API that provides these guidelines.
  * */

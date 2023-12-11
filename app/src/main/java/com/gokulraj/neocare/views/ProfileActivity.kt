@@ -11,6 +11,10 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
+/**
+ * This handles the profile information of user
+ *  */
+
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileUpdateBinding

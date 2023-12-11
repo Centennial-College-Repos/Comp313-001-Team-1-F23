@@ -24,7 +24,7 @@ import com.google.firebase.database.core.Context
 class RegistrationActivity : AppCompatActivity(), View.OnFocusChangeListener {
 
     private lateinit var mBinding: ActivityRegistrationBinding
-    //private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseDatabase: FirebaseDatabase
     private lateinit var databaseReference: DatabaseReference
     private var userType: String = "Patient"
@@ -35,7 +35,7 @@ class RegistrationActivity : AppCompatActivity(), View.OnFocusChangeListener {
         mBinding = ActivityRegistrationBinding.inflate(LayoutInflater.from(this))
         setContentView(mBinding.root)
 
-        //firebaseAuth = FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
         FirebaseApp.initializeApp(this)
         firebaseDatabase = FirebaseDatabase.getInstance()
         databaseReference = firebaseDatabase.reference.child("users")
@@ -81,74 +81,89 @@ class RegistrationActivity : AppCompatActivity(), View.OnFocusChangeListener {
     }
 
     private fun signUpUser(fullName: String, healthCard: String, email: String, password: String, isTermsAccepted: Boolean, userType: String) {
-        databaseReference.orderByChild("email").equalTo(email)
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(emailSnapshot: DataSnapshot) {
-                    databaseReference.orderByChild("healthCardNumber").equalTo(healthCard)
-                        .addListenerForSingleValueEvent(object : ValueEventListener {
-                            override fun onDataChange(healthCardSnapshot: DataSnapshot) {
-                                if (!emailSnapshot.exists() && !healthCardSnapshot.exists()) {
-                                    val id = databaseReference.push().key
-                                    val UserData = User(
-                                        id,
-                                        userType,
-                                        fullName,
-                                        healthCard,
-                                        email,
-                                        password,
-                                        isTermsAccepted
-                                    )
-                                    databaseReference.child(id!!).setValue(UserData)
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val firebaseUser = task.result?.user
+                    val uid = firebaseUser?.uid
+                    saveUserDataToDatabase(uid, userType, fullName, healthCard, email, password, isTermsAccepted)
+                } else {
+                    val exception = task.exception
+                    Toast.makeText(this@RegistrationActivity, "Registration Failed: ${exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
 
-                                    Toast.makeText(
-                                        this@RegistrationActivity,
-                                        "Signup Successful!",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                    startActivity(
-                                        Intent(
-                                            this@RegistrationActivity,
-                                            LoginActivity::class.java
+    private fun saveUserDataToDatabase(uid: String?, userType: String, fullName: String, healthCard: String, email: String, password: String, isTermsAccepted: Boolean) {
+        if (uid != null) {
+            databaseReference.orderByChild("email").equalTo(email)
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(emailSnapshot: DataSnapshot) {
+                        databaseReference.orderByChild("healthCardNumber").equalTo(healthCard)
+                            .addListenerForSingleValueEvent(object : ValueEventListener {
+                                override fun onDataChange(healthCardSnapshot: DataSnapshot) {
+                                    if (!emailSnapshot.exists() && !healthCardSnapshot.exists()) {
+                                        val id = databaseReference.push().key
+                                        val userData = User(
+                                            id,
+                                            userType,
+                                            fullName,
+                                            healthCard,
+                                            email,
+                                            password,
+                                            isTermsAccepted
                                         )
-                                    )
-                                    finish()
-                                } else {
-                                    if (emailSnapshot.exists()) {
+                                        databaseReference.child(uid).setValue(userData)
+
                                         Toast.makeText(
                                             this@RegistrationActivity,
-                                            "Email is already taken",
+                                            "Signup Successful!",
                                             Toast.LENGTH_SHORT
                                         ).show()
-                                    }
-                                    if (healthCardSnapshot.exists()) {
-                                        Toast.makeText(
-                                            this@RegistrationActivity,
-                                            "Health Card number is already registered",
-                                            Toast.LENGTH_SHORT
-                                        ).show()
+                                        startActivity(
+                                            Intent(
+                                                this@RegistrationActivity,
+                                                LoginActivity::class.java
+                                            )
+                                        )
+                                        finish()
+                                    } else {
+                                        if (emailSnapshot.exists()) {
+                                            Toast.makeText(
+                                                this@RegistrationActivity,
+                                                "Email is already taken",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
+                                        if (healthCardSnapshot.exists()) {
+                                            Toast.makeText(
+                                                this@RegistrationActivity,
+                                                "Health Card number is already registered",
+                                                Toast.LENGTH_SHORT
+                                            ).show()
+                                        }
                                     }
                                 }
-                            }
 
+                                override fun onCancelled(healthCardError: DatabaseError) {
+                                    Toast.makeText(
+                                        this@RegistrationActivity,
+                                        "Database Error: ${healthCardError.message}",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            })
+                    }
 
-                            override fun onCancelled(healthCardError: DatabaseError) {
-                                Toast.makeText(
-                                    this@RegistrationActivity,
-                                    "Database Error: ${healthCardError.message}",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                            }
-                        })
-                }
-
-                override fun onCancelled(emailError: DatabaseError) {
-                    Toast.makeText(
-                        this@RegistrationActivity,
-                        "Database Error: ${emailError.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            })
+                    override fun onCancelled(emailError: DatabaseError) {
+                        Toast.makeText(
+                            this@RegistrationActivity,
+                            "Database Error: ${emailError.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                })
+        }
     }
 
     private fun validateFullName(): Boolean {
@@ -176,7 +191,7 @@ class RegistrationActivity : AppCompatActivity(), View.OnFocusChangeListener {
         if(value.isEmpty()){
             errorMsg = "Health card number is required."
         } else if(value.length < 12){
-            errorMsg = "Health card number is in the wrong format. Should be greater than 12"
+            errorMsg = "Health card number is in the wrong format. Should be greater than or equal 12"
         }
 
         if (errorMsg != null){
@@ -215,8 +230,8 @@ class RegistrationActivity : AppCompatActivity(), View.OnFocusChangeListener {
 
         if(value.isEmpty()) {
             errorMsg = "Password is required."
-        } else if(value.length < 5){
-            errorMsg = "Password must be at least 5 characters long."
+        } else if(value.length < 6){
+            errorMsg = "Password must be at least 6 characters long."
         }
 
         if (errorMsg != null){

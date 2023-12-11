@@ -25,6 +25,7 @@ import kotlin.system.exitProcess
  * This handles the login of EMT and Patients into the application
  *  */
 
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding

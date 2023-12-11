@@ -55,10 +55,6 @@ class ProtocolActivity : AppCompatActivity() {
     }
 
     private fun getGuidelinesForCondition(condition: String): String {
-        // Replace with your logic to fetch and return guidelines for the selected condition
-        // This can involve network requests, database queries, or local data retrieval
-        // Return the guidelines as a string
-        // For example:
         return when (condition) {
             "Heart Disease" -> "Guidelines for Heart Disease:\nIt's essential to consult with a healthcare professional or cardiologist for personalized treatment recommendations. Moreover, the specific guidelines may change over time, so it's crucial to refer to the most recent guidelines from reputable sources such as the American College of Cardiology (ACC) or the American Heart Association (AHA). These organizations regularly publish and update guidelines for the treatment of various heart diseases."
             "Accident" -> "Guidelines for Accident:\nMedical guidelines and protocols for responding to accidents vary depending on the type and severity of the accident. Accidents can encompass a wide range of situations, such as motor vehicle accidents, workplace accidents, falls, sports injuries, and more."

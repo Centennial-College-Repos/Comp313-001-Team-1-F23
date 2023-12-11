@@ -33,8 +33,5 @@
             android:text="Patient Location"
             android:padding="8dp"/>
 
-        <!-- Additional fields for more patient information -->
-        <!-- ... -->
-
     </LinearLayout>
 </ScrollView>

@@ -41,7 +41,6 @@ class FeedbackActivity : AppCompatActivity() {
 
         alertDialogBuilder.setPositiveButton("Submit") { _, _ ->
             val feedbackText = inputEditText.text.toString()
-            // You can now send this feedback to your server or handle it as needed
             handleFeedbackSubmission(feedbackText)
         }
 
@@ -53,14 +52,8 @@ class FeedbackActivity : AppCompatActivity() {
     }
 
     private fun handleFeedbackSubmission(feedbackText: String) {
-        // You can implement logic to send feedback to your server or store it locally
-        // For example, you might make a network request to a feedback API
-        // or save it to a local database.
-
-        // For now, let's just log the feedback
         Log.d("Feedback", "User provided feedback: $feedbackText")
 
-        // You may want to show a thank you message to the user or handle it accordingly
         Toast.makeText(this, "Thank you for your feedback!", Toast.LENGTH_SHORT).show()
     }
 }

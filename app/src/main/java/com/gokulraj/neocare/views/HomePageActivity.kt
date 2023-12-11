@@ -8,20 +8,16 @@ package com.gokulraj.neocare.views
  *  */
 
 
-import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
-import android.speech.RecognizerIntent
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.gokulraj.neocare.databinding.ActivityHomepageBinding
 import com.gokulraj.neocare.views.emt.*
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlin.system.exitProcess
 
@@ -118,7 +114,7 @@ class HomePageActivity:AppCompatActivity() {
         binding.aboutUsLink.visibility = View.VISIBLE
         binding.logOutLink.visibility=View.VISIBLE
         binding.feedbackLink.visibility=View.VISIBLE
-        binding.firstAidLink.visibility = View.VISIBLE // Hide this option for patients
+        binding.firstAidLink.visibility = View.VISIBLE
         binding.ambulanceDetails.visibility=View.GONE
         binding.protocols.visibility=View.GONE
         binding.emergencyRequest.visibility=View.GONE
@@ -132,7 +128,7 @@ class HomePageActivity:AppCompatActivity() {
         binding.updateProfileLink.visibility = View.VISIBLE
         binding.teamMembersLink.visibility = View.VISIBLE
         binding.aboutUsLink.visibility = View.VISIBLE
-        binding.firstAidLink.visibility = View.VISIBLE // Show this option for healthcare professionals
+        binding.firstAidLink.visibility = View.VISIBLE
         binding.logOutLink.visibility=View.VISIBLE
         binding.ambulanceDetails.visibility=View.VISIBLE
         binding.protocols.visibility=View.VISIBLE
@@ -150,7 +146,6 @@ class HomePageActivity:AppCompatActivity() {
         editor.remove("USER_TYPE") // Remove the user type
         editor.apply()
 
-        //FirebaseAuth.getInstance().signOut() // Sign out the user from Firebase Authentication
         Toast.makeText(this, "Logout Successful", Toast.LENGTH_SHORT).show()
 
         // Create a delayed action to start the LoginActivity after 2 seconds

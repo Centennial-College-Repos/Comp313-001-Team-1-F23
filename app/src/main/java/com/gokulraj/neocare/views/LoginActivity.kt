@@ -10,7 +10,6 @@ import android.speech.RecognizerIntent
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.gokulraj.neocare.database.User
 import com.gokulraj.neocare.databinding.ActivityLoginBinding
 import com.gokulraj.neocare.views.emt.EmtLoginActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -49,14 +48,14 @@ class LoginActivity : AppCompatActivity() {
 
         binding.requestImageView.setOnClickListener {
             // Handle the emergency services request here
-            // You can start an emergency service activity, make a call, or perform any other action as needed.
-            // For this example, we'll open the phone dialer to call an emergency number (e.g., 911).
+            // Start an emergency service activity, make a call, or perform any other action as needed.
+            // We'll open the phone dialer to call an emergency number (e.g., 911).
             val phoneNumber = "tel:911"
             val intent = Intent(Intent.ACTION_DIAL, Uri.parse(phoneNumber))
             startActivity(intent)
         }
 
-        // Attach a click listener to the voice command button
+        // Attaching a click listener to the voice command button
         binding.voiceCommandButton.setOnClickListener {
             startVoiceCommand()
         }
@@ -96,7 +95,7 @@ class LoginActivity : AppCompatActivity() {
         try {
             startActivityForResult(intent, VOICE_COMMAND_REQUEST_CODE)
         } catch (e: ActivityNotFoundException) {
-            // Handle the case where voice recognition is not supported on the device
+            // Handling the case where voice recognition is not supported on the device
             Toast.makeText(this, "Voice recognition not supported on this device", Toast.LENGTH_SHORT).show()
         }
     }

@@ -76,6 +76,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
             }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)

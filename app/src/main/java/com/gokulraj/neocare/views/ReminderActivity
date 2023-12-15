@@ -1,0 +1,56 @@
+package com.gokulraj.neocare.views
+
+import java.util.*
+
+data class Patient(
+    val name: String,
+    val vitalSignsReminder: Reminder,
+    val medicationReminder: Reminder
+)
+
+data class Reminder(
+    val task: String,
+    val intervalMinutes: Int
+)
+
+class EMTReminderSystem {
+
+    private val patients: MutableMap<String, Patient> = mutableMapOf()
+
+    fun addPatient(patient: Patient) {
+        patients[patient.name] = patient
+    }
+
+    fun startReminders() {
+        val timer = Timer(true)
+
+        patients.values.forEach { patient ->
+            scheduleReminder(timer, patient.vitalSignsReminder, patient.name, "Vital Signs")
+            scheduleReminder(timer, patient.medicationReminder, patient.name, "Medication")
+        }
+    }
+
+    private fun scheduleReminder(timer: Timer, reminder: Reminder, patientName: String, task: String) {
+        val intervalMillis = reminder.intervalMinutes * 60 * 1000L
+        timer.scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                println("Reminder for $patientName: $task - ${reminder.task}")
+                // Add logic here to perform the specific task (e.g., check vital signs, administer medication)
+            }
+        }, 0, intervalMillis)
+    }
+}
+
+fun main() {
+    // Example usage
+    val patient1 = Patient("John Doe", Reminder("Re-evaluate vital signs", 30), Reminder("Administer medication", 60))
+    val patient2 = Patient("Jane Doe", Reminder("Re-evaluate vital signs", 45), Reminder("Administer medication", 90))
+
+    val emtReminderSystem = EMTReminderSystem()
+    emtReminderSystem.addPatient(patient1)
+    emtReminderSystem.addPatient(patient2)
+
+    emtReminderSystem.startReminders()
+
+    // This example uses a simple Timer to simulate reminders. In a real application, you may need a more robust solution.
+}

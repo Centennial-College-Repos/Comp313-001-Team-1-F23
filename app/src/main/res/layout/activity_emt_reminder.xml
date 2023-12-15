@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewPatientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Name:" />
+
+    <EditText
+        android:id="@+id/editTextPatientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPatientName"
+        android:layout_marginTop="8dp"
+        android:hint="Enter patient's name" />
+
+    <TextView
+        android:id="@+id/textViewVitalSigns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPatientName"
+        android:layout_marginTop="16dp"
+        android:text="Vital Signs Reminder Interval (minutes):" />
+
+    <EditText
+        android:id="@+id/editTextVitalSignsInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewVitalSigns"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:hint="Enter interval for vital signs reminder" />
+
+    <TextView
+        android:id="@+id/textViewMedication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextVitalSignsInterval"
+        android:layout_marginTop="16dp"
+        android:text="Medication Reminder Interval (minutes):" />
+
+    <EditText
+        android:id="@+id/editTextMedicationInterval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewMedication"
+        android:layout_marginTop="8dp"
+        android:inputType="number"
+        android:hint="Enter interval for medication reminder" />
+
+    <Button
+        android:id="@+id/buttonStartReminders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMedicationInterval"
+        android:layout_marginTop="16dp"
+        android:text="Start Reminders" />
+
+</RelativeLayout>

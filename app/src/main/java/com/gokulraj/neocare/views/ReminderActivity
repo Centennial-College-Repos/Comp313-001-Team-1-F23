@@ -52,5 +52,4 @@ fun main() {
 
     emtReminderSystem.startReminders()
 
-    // This example uses a simple Timer to simulate reminders. In a real application, you may need a more robust solution.
 }
